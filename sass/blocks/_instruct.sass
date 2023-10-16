@@ -40,7 +40,7 @@
       color: #162136
     &__cards
       margin-top: 25px
-      display: flex
+      display: none
       flex-direction: row
       flex-wrap: wrap
       justify-content: space-between
@@ -55,8 +55,16 @@
       background-color: #F4F4F4
       border-radius: 24px
       margin-bottom: 30px
-      .big
-        width: 100%
+    &__cardbig
+      height: 490px
+      width: 100%
+      display: flex
+      flex-direction: column
+      justify-content: space-between
+      align-items: center
+      overflow: hidden
+      background-color: #F4F4F4
+      border-radius: 24px
     &__num
       display: flex
       flex-direction: column
@@ -86,6 +94,10 @@
         z-index: -1
       &.left
         margin-top: -55px
+      &.mob
+        margin-top: -80px
+      &.five
+        margin-top: -60px
     &__name
       width: 100%
       display: flex
@@ -127,3 +139,93 @@
       margin-top: 8px
     &__span
       width: 50%
+    &__info
+      display: flex
+      flex-direction: column
+      text-align: center
+      align-items: center
+      span
+        width: 100%
+
+
+
+@media(max-width: 1200px)
+  .instruct
+    width: 100%
+
+
+@media(max-width: 1000px)
+  .instruct
+    &-block
+      &__cards
+        flex-direction: column
+      &__card
+        width: 100%
+
+@media(max-width: 850px)
+  .instruct
+    margin-top: 32px
+    &-block
+      &__subtitle
+        width: 100%
+
+
+@media(max-width: 600px)
+  .instruct
+    &-block
+      padding: 16px
+      &__title
+        font-size: 28px
+        line-height: 34px
+      &__card
+        height: 400px
+      &__image
+        width: 100%
+        img
+          width: 100%
+        &.mb
+          margin-left: 0
+
+
+@media(max-width: 450px)
+  .instruct
+    &-block
+      &__number
+        margin-top: -50px
+        &.left
+          margin-top: -70px
+        &.mob
+          margin-top: -60px
+        &.mobile
+          margin-top: -50px
+          &::after
+            top: -85px
+  .mar
+    width: 200px !important
+
+@media(max-width: 400px)
+  .instruct
+    &-block
+      &__name
+        span
+          font-size: 16px
+          line-height: 24px
+        p
+          font-size: 16px
+          line-height: 24px
+      &__number
+        margin-top: -50px
+        &::after
+          top: -100px
+          left: -100px
+        &.left
+          margin-top: -70px
+        &.mob
+          margin-top: -80px
+          &::after
+            top: -100px
+            left: -100px
+        &.mobile
+          margin-top: -50px
+          &::after
+            top: -85px

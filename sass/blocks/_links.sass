@@ -20,6 +20,7 @@
       width: max-content
       margin-bottom: 20px
       cursor: pointer
+      width: 318px
       span
         color: #fff
         font-family: "Inter", sans-serif
@@ -27,9 +28,13 @@
         font-size: 16px
         line-height: 24px
     &__item
-      padding: 30px 0px 30px 0px
+      padding: 30px 0px 0px 0px
     &__icon
       margin-right: 7px
+    &__content
+      display: none
+      &.show
+        display: block
     &__switch
       display: flex
       flex-direction: row
@@ -70,13 +75,11 @@
       list-style-type: none
       counter-reset: num
       margin: 0px 0px 0px 40px
-      padding: 15px 0px 5px 0px  
+      padding: 15px 0px 30px 0px  
       li
+        display: inline-block
         position: relative
         padding-bottom: 13px
-        display: flex
-        flex-direction: row
-        align-items: center
         &::before
           content: counter(num)
           counter-increment: num
@@ -98,6 +101,7 @@
           color: #162136
         &:last-child
           padding-bottom: 0
+
     &__text
       font-family: "Inter", sans-serif
       font-weight: 400
@@ -106,3 +110,45 @@
       color: #162136
       a
         margin-left: 5px
+    &__cart
+      height: 145px
+      width: 512px
+      margin-bottom: 12px
+
+
+
+@media(max-width: 1200px)
+  .links
+    width: 100%
+
+
+
+
+@media(max-width: 600px)
+  .links
+    &-block
+      padding: 16px
+      &__image
+        width: 100%
+      &__cart
+        height: 91px
+        width: 300px
+        margin-left: -35px
+      &__li
+        a
+          width: 50%
+  .href
+    width: 90%
+    font-size: 18px
+    line-height: 24px
+
+
+
+@media(max-width: 350px)
+  .links
+    &-block
+      &__time span
+        font-size: 12px
+      &__cart
+        width: 245px
+        object-fit: contain
