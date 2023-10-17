@@ -55,16 +55,9 @@
       background-color: #F4F4F4
       border-radius: 24px
       margin-bottom: 30px
-    &__cardbig
-      height: 490px
-      width: 100%
-      display: flex
-      flex-direction: column
-      justify-content: space-between
-      align-items: center
-      overflow: hidden
-      background-color: #F4F4F4
-      border-radius: 24px
+      position: relative
+      &.big
+        width: 100%
     &__num
       display: flex
       flex-direction: column
@@ -92,12 +85,16 @@
         background-color: #0098461A
         content: ""
         z-index: -1
-      &.left
-        margin-top: -55px
-      &.mob
-        margin-top: -80px
-      &.five
-        margin-top: -60px
+      // &.left
+      //   margin-top: -55px
+      // &.mob
+      //   margin-top: -80px
+      // &.five
+      //   margin-top: -60px
+    &__parent
+      position: absolute
+      top: 50px
+      left: 10px
     &__name
       width: 100%
       display: flex
@@ -137,6 +134,7 @@
       color: #687082
       text-align: center
       margin-top: 8px
+      width: 100%
     &__span
       width: 50%
     &__info
@@ -144,9 +142,6 @@
       flex-direction: column
       text-align: center
       align-items: center
-      span
-        width: 100%
-
 
 
 @media(max-width: 1200px)
@@ -185,23 +180,19 @@
           width: 100%
         &.mb
           margin-left: 0
-
-
-@media(max-width: 450px)
-  .instruct
-    &-block
+      &__info
+        width: 60%
+      &__name
+        span
+          width: 100%
+        p
+          width: 100%
       &__number
-        margin-top: -50px
-        &.left
-          margin-top: -70px
-        &.mob
-          margin-top: -60px
-        &.mobile
-          margin-top: -50px
-          &::after
-            top: -85px
-  .mar
-    width: 200px !important
+        margin-left: 15px
+        margin-top: -30px
+        &::after
+          top: -95px
+          left: -95px 
 
 @media(max-width: 400px)
   .instruct
@@ -213,19 +204,3 @@
         p
           font-size: 16px
           line-height: 24px
-      &__number
-        margin-top: -50px
-        &::after
-          top: -100px
-          left: -100px
-        &.left
-          margin-top: -70px
-        &.mob
-          margin-top: -80px
-          &::after
-            top: -100px
-            left: -100px
-        &.mobile
-          margin-top: -50px
-          &::after
-            top: -85px
